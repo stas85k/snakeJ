@@ -13,7 +13,7 @@ public class Board extends JPanel implements ActionListener {
 
     private final int B_WIDTH = 700;
     private final int B_HEIGHT = 700;
-    private final int DOT_SIZE = 25;
+    private final int DOT_SIZE = 10;
     private final int ALL_DOTS = 4900;
     private final int RAND_POS = 29;
     private final int DELAY = 140;
@@ -101,7 +101,7 @@ public class Board extends JPanel implements ActionListener {
 
             gameOver(g);
             try {
-                Thread.sleep(300);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

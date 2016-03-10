@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
+
 public class Snake extends JFrame {
 
     public Snake() {
