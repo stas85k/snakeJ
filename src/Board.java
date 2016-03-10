@@ -11,8 +11,8 @@ import java.awt.event.KeyEvent;
 
 public class Board extends JPanel implements ActionListener {
 
-    private final int B_WIDTH = 800;
-    private final int B_HEIGHT = 800;
+    private final int B_WIDTH = 700;
+    private final int B_HEIGHT = 700;
     private final int DOT_SIZE = 25;
     private final int ALL_DOTS = 4900;
     private final int RAND_POS = 29;
@@ -100,13 +100,22 @@ public class Board extends JPanel implements ActionListener {
         } else {
 
             gameOver(g);
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            setBackground(Color.red);
+
+
+
         }
     }
 
     private void gameOver(Graphics g) {
 
-        String msg = "Game Over";
-        Font small = new Font("Helvetica", Font.BOLD, 14);
+        String msg = "Final del juego!";
+        Font small = new Font("Herculanum", Font.BOLD, 30);
         FontMetrics metr = getFontMetrics(small);
 
         g.setColor(Color.white);
